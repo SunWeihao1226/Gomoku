@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+import java.awt.event.ActionEvent;
 
-public class ActionListener {
-}
+/*
+ * Action Listener class
+ */
+
+
