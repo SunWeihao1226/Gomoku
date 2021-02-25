@@ -12,5 +12,5 @@ clicking the "System" button on the upper left corner of the panel.
 ##Reference
 
 https://github.com/ecraya14/Gomoku  
-https://blog.csdn.net/cnlht/article/details/8176130
+https://blog.csdn.net/cnlht/article/details/8176130  
 https://stackoverflow.com/questions/4312391/board-game-win-situation-searching-algorithm
