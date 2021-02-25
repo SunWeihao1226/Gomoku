@@ -44,7 +44,9 @@ public class StartPanel extends JFrame {
     }
 
 
+    // Initialize items in the menu
     private void initializeItemsInteraction(){
+        // Initialize interaction of restart button
         startItem.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,6 +63,7 @@ public class StartPanel extends JFrame {
             }
         });
 
+        // Initialize interaction of back step button
         backItem.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -175,7 +175,7 @@ public class Board extends JPanel implements MouseListener {
 
     }
 
-    // Check if one is win. I.e. If there are five same color pieces in a line
+    // Check if one is win. I.e. If there are five same color pieces in a line vertically, horizontally, ot diagonally
     private boolean isWin() {
         int numPieceLine = 1; // number of pieces in a line
 
