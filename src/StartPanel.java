@@ -1,21 +1,77 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /*
  * The main frame of the GoBang
  */
 
 public class StartPanel extends JFrame {
+    private JMenuBar menuBar;
+    private JMenu menu;
+    private JMenuItem startItem;
+    private JMenuItem backItem;
+    private JMenuItem quitItem;
 
+    private Board board;
+
+    // Constructor
     public StartPanel() {
+        // Initialize elements
+        menuBar = new JMenuBar();
+        menu = new JMenu("System");
+        startItem = new JMenuItem("Restart");
+        backItem = new JMenuItem("Back Step");
+        quitItem = new JMenuItem("Quit");
+        board = new Board();
+
+        // Set and add elements
+        setTitle("Gomoku");
+        Container container = getContentPane();
+        container.add(board);
+        board.setOpaque(true);
+        menu.add(startItem);
+        menu.add(backItem);
+        menu.add(quitItem);
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
+        add(board);
+        initializeItemsInteraction();
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
     }
 
-    private class ActionListener implements java.awt.event.ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
 
-        }
+    private void initializeItemsInteraction(){
+        startItem.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.print("Restart");
+                board.restart();
+            }
+        });
+
+        // Initialize interaction of quit button
+        quitItem.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+        backItem.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.print("Go back on step");
+                board.backStep();
+            }
+        });
+
     }
+
+
+
 }
 
